@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Social Media Dashboard</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: hsl(356, 69%, 56%);
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="background-colors">
+        <div class="bg-pattern-color"></div>
+        <div class="bg-color"></div>
+      </div>
+      <section class="dashboard-container">
+        <div class="dashboard-title">
+          <h1>Social Media Dashboard</h1>
+          <small>Total Followers: 23,004</small>
+        </div>
+        <div class="toggle-container">
+          <span id="toggle-icon">
+            <span class="toggle-text">Light Mode</span>
+            <i class="fas fa-sun"></i>
+          </span>
+          <input type="checkbox" id="dark-mode" />
+          <label class="theme-switch" for="dark-mode">
+            <div class="ball"></div>
+          </label>
+        </div>
+      </section>
+      <section class="social-container">
+        <div class="social-card facebook">
+          <div class="social-icon">
+            <img src="./images/icon-facebook.svg" alt="Facebook" />
+            <p>@nathanf</p>
+          </div>
+          <div class="followers">
+            <h2>1987</h2>
+            <p>Followers</p>
+          </div>
+          <div class="current-followers">
+            <img src="./images/icon-up.svg" alt="Icon up arrow" />
+            <p>12 Today</p>
+          </div>
+        </div>
+        <div class="social-card twitter">
+          <div class="social-icon">
+            <img src="./images/icon-twitter.svg" alt="Twitter" />
+            <p>@nathanf</p>
+          </div>
+          <div class="followers">
+            <h2>1044</h2>
+            <p>Followers</p>
+          </div>
+          <div class="current-followers">
+            <img src="./images/icon-up.svg" alt="Icon up arrow" />
+            <p>99 Today</p>
+          </div>
+        </div>
+        <div class="social-card instagram">
+          <div class="social-icon">
+            <img src="./images/icon-instagram.svg" alt="Instagram" />
+            <p>@realnathanf</p>
+          </div>
+          <div class="followers">
+            <h2>11k</h2>
+            <p>Followers</p>
+          </div>
+          <div class="current-followers">
+            <img src="./images/icon-up.svg" alt="Icon up arrow" />
+            <p>1099 Today</p>
+          </div>
+        </div>
+        <div class="social-card youtube">
+          <div class="social-icon">
+            <img src="./images/icon-youtube.svg" alt="Youtube" />
+            <p>Nathan F.</p>
+          </div>
+          <div class="followers">
+            <h2>8239</h2>
+            <p>Subscribers</p>
+          </div>
+          <div class="current-followers youtube">
+            <img src="./images/icon-down.svg" alt="Icon down arrow" />
+            <p>144 Today</p>
+          </div>
+        </div>
+      </section>
+      <section class="overview-container">
+        <div class="overview-title">
+          <h3>Overview - Today</h3>
+        </div>
+        <div class="view-cards-container">
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Page Views</h4>
+              <img src="./images/icon-facebook.svg" alt="Facebook" />
+            </div>
+            <div class="view-stats">
+              <h4>87</h4>
+              <div class="number-stat">
+                <img src="./images/icon-up.svg" alt="icon up arrow" />
+                <p>3%</p>
+              </div>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Likes</h4>
+              <img src="./images/icon-facebook.svg" alt="Facebook" />
+            </div>
+            <div class="view-stats">
+              <h4>52</h4>
+              <div class="number-stat facebook">
+                <img src="./images/icon-down.svg" alt="icon down arrow" />
+                <p>2%</p>
+              </div>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Likes</h4>
+              <img src="./images/icon-instagram.svg" alt="Instagram" />
+            </div>
+            <div class="view-stats">
+              <h4>5462</h4>
+              <div class="number-stat">
+                <img src="./images/icon-up.svg" alt="icon up arrow" />
+                <p>2257%</p>
+              </div>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Profile Views</h4>
+              <img src="./images/icon-instagram.svg" alt="Instagram" />
+            </div>
+            <div class="view-stats">
+              <h4>52k</h4>
+              <div class="number-stat">
+                <img src="./images/icon-up.svg" alt="icon up arrow" />
+                <p>1375%</p>
+              </div>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Retweets</h4>
+              <img src="./images/icon-twitter.svg" alt="Twitter" />
+            </div>
+            <div class="view-stats">
+              <h4>117</h4>
+              <div class="number-stat">
+                <img src="./images/icon-up.svg" alt="icon up arrow" />
+                <p>303%</p>
+              </div>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Likes</h4>
+              <img src="./images/icon-twitter.svg" alt="Twitter" />
+            </div>
+            <div class="view-stats">
+              <h4>507</h4>
+              <div class="number-stat">
+                <img src="./images/icon-up.svg" alt="icon up arrow" />
+                <p>553%</p>
+              </div>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Likes</h4>
+              <img src="./images/icon-youtube.svg" alt="Youtube" />
+            </div>
+            <div class="view-stats">
+              <h4>107</h4>
+              <div class="number-stat youtube">
+                <img src="./images/icon-down.svg" alt="icon down arrow" />
+                <p>19%</p>
+              </div>
+            </div>
+          </div>
+          <div class="view-card">
+            <div class="page-views">
+              <h4>Total Views</h4>
+              <img src="./images/icon-youtube.svg" alt="Youtube" />
+            </div>
+            <div class="view-stats">
+              <h4>1407</h4>
+              <div class="number-stat youtube">
+                <img src="./images/icon-down.svg" alt="icon down arrow" />
+                <p>12%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="social-icons" aria-label="Social Network Icons">
+        <a href="https://www.facebook.com/pritam.tirpude.1/" target="_blank"
+          ><i class="fab fa-facebook" aria-label="Facebook Icon"></i
+        ></a>
+        <a href="https://twitter.com/ptirpude1991" target="_blank"
+          ><i class="fab fa-twitter" aria-label="Twitter Icon"></i
+        ></a>
+        <a href="https://github.com/Pritam-Tirpude" target="_blank"
+          ><i class="fab fa-github" aria-label="Github Icon"></i
+        ></a>
+        <a href="https://www.instagram.com/pr.itam6519/" target="_blank"
+          ><i class="fab fa-instagram" aria-label="Instagram Icon"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/pritam23/" target="_blank"
+          ><i class="fab fa-linkedin-in" aria-label="LinkedIn Icon"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/channel/UCPDoJJXluLw1IESENwnGMng"
+          target="_blank"
+          ><i class="fab fa-youtube" aria-label="Youtube Icon"></i
+        ></a>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/Pritam-Tirpude"
+        target="_blank"
+        >Pritam Tirpude</a
+      >.
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

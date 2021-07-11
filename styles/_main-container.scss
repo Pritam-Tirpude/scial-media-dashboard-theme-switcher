@@ -1,0 +1,336 @@
+main {
+  position: relative;
+  min-height: 100vh;
+}
+.dashboard-container {
+  padding: 5rem 20rem;
+  @include flex(space-between, center, row);
+
+  @media screen and (max-width: 932px) {
+    padding: 5rem 3rem;
+    flex-wrap: wrap;
+  }
+}
+
+.dashboard-title {
+  position: relative;
+
+  h1 {
+    color: $text-color-accent;
+    font-size: 3rem;
+  }
+  small {
+    font-weight: bold;
+    color: $text-color-light;
+
+    @media screen and (max-width: 932px) {
+      font-size: 2rem;
+      padding: 1rem 0rem;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 932px) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $text-color-accent;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.toggle-container {
+  @include flex(center, center, row);
+
+  @media screen and (max-width: 932px) {
+    @include flex(space-between, center, row);
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .toggle-text {
+    color: $text-color-light;
+    font-weight: bold;
+  }
+
+  .fas {
+    font-size: 2rem;
+  }
+
+  .theme-switch {
+    position: relative;
+    width: 60px;
+    height: 25px;
+    background-color: $toggle-light-color;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px 0;
+    transition: background-color 0.5s ease;
+  }
+
+  input[type="checkbox"] {
+    visibility: hidden;
+  }
+
+  input[type="checkbox"]:checked + .theme-switch {
+    background: linear-gradient(
+      to right,
+      $toggle-dark-linear-one-color,
+      $toggle-dark-linear-two-color
+    );
+  }
+  input[type="checkbox"]:checked + .theme-switch .ball {
+    background: $background-pattern-color;
+    transform: translateX(35px);
+  }
+
+  .ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.5s ease;
+  }
+}
+
+// Social Container
+.social-container {
+  padding: 5rem 20rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 15px;
+  position: relative;
+  top: -50px;
+
+  @media screen and (max-width: 932px) {
+    padding: 5rem 3rem;
+    grid-row-gap: 15px;
+  }
+}
+
+.social-card {
+  background: hsl(222, 50%, 96%);
+  padding: 3rem 5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+  .social-icon {
+    @include flex(center, center, row);
+    img {
+      margin: 0 15px;
+    }
+    p {
+      color: $text-color-light;
+      font-weight: bold;
+    }
+  }
+  .followers {
+    padding-top: 2rem;
+    @include flex(center, center, column);
+
+    h2 {
+      color: $text-color-accent;
+      font-size: 5rem;
+    }
+
+    p {
+      text-transform: uppercase;
+      color: $text-color-light;
+      letter-spacing: 0.5rem;
+    }
+  }
+  .current-followers {
+    padding-top: 2rem;
+    @include flex(center, center, row);
+    img {
+      margin: 0 5px;
+    }
+    p {
+      color: $light-green-color;
+      font-weight: bold;
+    }
+  }
+
+  .current-followers.youtube {
+    p {
+      color: $bright-red-color;
+    }
+  }
+
+  &:hover {
+    background: hsl(232, 33%, 91%) !important;
+  }
+}
+
+.social-card.facebook {
+  border-top: 5px solid $facebook-color;
+}
+.social-card.twitter {
+  border-top: 5px solid $twitter-color;
+}
+
+.social-card.instagram::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-top: none;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background: linear-gradient(
+    to right,
+    $instagram-linear-one-color,
+    $instagram-linear-two-color
+  );
+}
+
+.social-card.youtube {
+  border-top: 5px solid $youtube-color;
+}
+
+.overview-container {
+  padding: 5rem 20rem;
+  position: relative;
+  top: -80px;
+
+  @media screen and (max-width: 932px) {
+    padding: 5rem 3rem;
+  }
+}
+
+.overview-title {
+  h3 {
+    color: $text-color-light;
+    font-size: 3rem;
+  }
+}
+
+.view-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding-top: 3rem;
+}
+
+.view-card {
+  padding: 2rem 2rem;
+  background: hsl(222, 50%, 96%);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+  .page-views {
+    @include flex(space-between, center, row);
+    h4 {
+      color: $text-color-light;
+    }
+  }
+
+  .view-stats {
+    padding-top: 3rem;
+    @include flex(space-between, center, row);
+
+    h4 {
+      color: $text-color-accent;
+      font-size: 3rem;
+    }
+
+    .number-stat {
+      @include flex(center, center, row);
+      p {
+        color: $light-green-color;
+        font-weight: bold;
+      }
+    }
+
+    .number-stat.facebook {
+      p {
+        color: $bright-red-color;
+      }
+    }
+
+    .number-stat.youtube {
+      p {
+        color: $bright-red-color;
+      }
+    }
+  }
+
+  &:hover {
+    background: hsl(232, 33%, 91%) !important;
+    opacity: 0.9;
+  }
+}
+
+.social-icons {
+  @include flex(space-evenly, center, row);
+  padding: 5rem 20rem;
+  @media screen and (max-width: 932px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .fab {
+    font-size: 5rem;
+    transition: box-shadow 0.5s ease;
+    &:hover {
+      box-shadow: 0px 0px 30px hsla(356, 69, 56, 0.8);
+    }
+  }
+
+  .fa-facebook {
+    color: $facebook-color;
+  }
+
+  .fa-twitter {
+    color: $twitter-color;
+  }
+
+  .fa-github {
+    color: $text-color-light;
+  }
+
+  .fa-instagram {
+    color: transparent;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    background: -webkit-radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    background-clip: text;
+  }
+
+  .fa-linkedin-in {
+    color: $facebook-color;
+  }
+
+  .fa-youtube {
+    color: $youtube-color;
+  }
+}
