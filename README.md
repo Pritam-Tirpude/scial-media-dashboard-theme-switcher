@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Social media dashboard with theme switcher Solution](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5/hub/semantic-html-css3-sass-javascript-and-for-slider-i-used-swiper-js-gLHeslHy0)
-- Live Site URL: [Live Site](https://manage-landing-master.netlify.app/)
+- Solution URL: [Social media dashboard with theme switcher Solution](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H/hub/htnl5-css3-flex-grid-sass-javascript-LAgWqOXBF)
+- Live Site URL: [Live Site](https://social-media-dashboard-site.netlify.app/)
 
 ## My process
 
